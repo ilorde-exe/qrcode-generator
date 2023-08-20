@@ -1,13 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from "react";
 
+const s = {
+  body: ``,
+  nav: `flex justify-center`,
+  navtitle: ``,
+};
 function App() {
   return (
     <>
-      
+      <div className={s.body}>
+        <nav className={s.nav}>
+          <header className={s.navtitle}>QR-Code Generator</header>
+        </nav>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
