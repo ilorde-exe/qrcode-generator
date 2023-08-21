@@ -2,8 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.qrbox {
-    display: flex;
-    justify-content: center;
-    height: fit-content;
-}
