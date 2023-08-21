@@ -10,6 +10,7 @@ const s = {
   boxtitle: `mb-2 text-2xl font-bold tracking-tight text-indigo-600 px-2`,
   boxinput: `bg-gray-50 border-2 border-gray-300 text-gray-900 text-l font-mono rounded-lg focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2.5`,
   qr: `w-full object-cover`,
+  qrbox: `flex justify-center`,
   button: `bg-gradient-to-r from-emerald-500 via-sky-500 to-indigo-500  hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-4 py-3 rounded-md`,
 };
 
@@ -29,7 +30,6 @@ function App() {
     document.body.removeChild(anchor);
     setUrl("");
   };
-
   return (
     <>
       <div className={s.bg}>
@@ -40,11 +40,12 @@ function App() {
           <div className={s.box} ref={qrRef}>
             <h5 className={s.boxtitle}>Enter your hyperlink/text:</h5>
             <QRCodeCanvas
-              className="qrCode"
+              id="qrCode"
               value={text}
               bgColor="#eef2ff"
               fgColor="#4f46e5"
               level={"H"}
+              size={290}
             />
             <input
               className={s.boxinput}
